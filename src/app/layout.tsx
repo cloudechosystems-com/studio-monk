@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Amplify } from "aws-amplify";
 import { cognitoConfig } from "@/config/cognito";
 import "./globals.css";
+import ConfigureAmplifyClientSide from "./amplify-cognito-config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,10 +37,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
+      {/* <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+      </body> */}
+      <body className={`${geistSans.className} antialiased`}>
+        <>
+          <ConfigureAmplifyClientSide />
+          {children}
+        </>
       </body>
     </html>
   );
