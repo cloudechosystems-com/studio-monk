@@ -209,7 +209,7 @@ async function handleConfirmSignUp(prevState, formData) {
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["redirect"])("/auth/login");
 }
 async function handleSignIn(prevState, formData) {
-    let redirectLink = "/dashboard";
+    let redirectLink = "/";
     try {
         const { isSignedIn, nextStep } = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$aws$2d$amplify$2f$auth$2f$dist$2f$esm$2f$providers$2f$cognito$2f$apis$2f$signIn$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["signIn"])({
             username: String(formData.get("email")),
