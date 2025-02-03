@@ -25,7 +25,6 @@ export default function Home() {
         {[1, 2, 3, 4, 5, 6].map((id) => (
           <VideoCard
             key={id}
-            id={id}
             title={`Sample Video ${id}`}
             thumbnailUrl={thumbnailImage}
             duration="0:30"

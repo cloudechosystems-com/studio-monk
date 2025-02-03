@@ -1,15 +1,13 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface VideoCardProps {
-  id: string;
   title: string;
-  thumbnailUrl: string;
+  thumbnailUrl: StaticImageData;
   duration: string;
   author: string;
 }
 
 export default function VideoCard({
-  id,
   title,
   thumbnailUrl,
   duration,
