@@ -1,11 +1,18 @@
 {
-  "pages": {},
   "app": {
-    "/Users/vikeshbk/go/src/studioMonk.io/studio-monk/src/app/layout": [
-      "static/media/569ce4b8f30dc480-s.p.woff2",
-      "static/media/93f479601ee12b01-s.p.woff2"
+    "[project]/src/app/page": [
+      "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2",
+      "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2"
+    ],
+    "[project]/src/app/auth/login/page": [
+      "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2",
+      "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2",
+      "static/media/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw-s.p.7b3669ea.woff2",
+      "static/media/CSR84z9ShvucWzsMKyhdTOIAStt_-s.p.3d91dfde.woff2",
+      "static/media/CSR74z9ShvucWzsMKyDmafctaNZUvuwl-s.p.328982ad.woff2"
     ]
   },
   "appUsingSizeAdjust": true,
+  "pages": {},
   "pagesUsingSizeAdjust": false
 }

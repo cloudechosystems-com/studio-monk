@@ -15,8 +15,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$aws$2d$ampli
 ;
 const authConfig = {
     Cognito: {
-        userPoolId: String(("TURBOPACK compile-time value", "eu-west-2_fOMNwUB9d")),
-        userPoolClientId: String(("TURBOPACK compile-time value", "64irrgubgq7vfkt7gu873hcl7c"))
+        userPoolId: String(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.NEXT_PUBLIC_USER_POOL_ID),
+        userPoolClientId: String(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.NEXT_PUBLIC_USER_POOL_CLIENT_ID)
     }
 };
 __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$aws$2d$amplify$2f$dist$2f$esm$2f$initSingleton$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__DefaultAmplify__as__Amplify$3e$__["Amplify"].configure({
