@@ -1,20 +1,20 @@
 "use client";
-import { useState } from "react";
-import FileUpload from "@/components/FileUpload";
+// import { useState } from "react";
+// import FileUpload from "@/components/FileUpload";
 
 export default function UploadPage() {
-  const [isUploading, setIsUploading] = useState(false);
-  const [uploadProgress, setUploadProgress] = useState(0);
+  //   const [isUploading, setIsUploading] = useState(false);
+  //   const [uploadProgress, setUploadProgress] = useState(0);
 
-  const handleUploadComplete = (url: string) => {
-    console.log("Upload completed:", url);
-    setIsUploading(false);
-    setUploadProgress(0);
-  };
+  //   const handleUploadComplete = (url: string) => {
+  //     console.log("Upload completed:", url);
+  //     setIsUploading(false);
+  //     setUploadProgress(0);
+  //   };
 
   return (
     <div className="min-h-screen p-8">
-      <header className="mb-8">
+      {/* <header className="mb-8">
         <h1 className="text-3xl font-bold mb-4">Upload Video</h1>
         <p className="text-gray-600 dark:text-gray-400 mb-8">
           Upload your video files to StudioMonk
@@ -45,7 +45,7 @@ export default function UploadPage() {
             </div>
           )}
         </div>
-      </main>
+      </main> */}
     </div>
   );
 }
