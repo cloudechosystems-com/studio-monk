@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["file://D%3A/Greeshma/studio-monk/src/app/amplify-cognito-config.ts"],"sourcesContent":["\"use client\";\r\n\r\nimport { Amplify, type ResourcesConfig } from \"aws-amplify\"; \r\n\r\nexport const authConfig: ResourcesConfig[\"Auth\"] = {\r\n    Cognito: {\r\n        userPoolId: String(process.env.NEXT_PUBLIC_USER_POOL_ID),\r\n        userPoolClientId: String(process.env.NEXT_PUBLIC_USER_POOL_CLIENT_ID),\r\n    },\r\n};\r\n\r\nAmplify.configure(\r\n    {\r\n        Auth: authConfig,        \r\n    },\r\n    { ssr: true }\r\n);\r\n\r\nexport default function ConfigureAmplifyClientSide() {\r\n    return null;\r\n}"],"names":[],"mappings":";;;;AAEA;AAFA;;AAIO,MAAM,aAAsC;IAC/C,SAAS;QACL,YAAY;QACZ,kBAAkB;IACtB;AACJ;AAEA,4MAAA,CAAA,UAAO,CAAC,SAAS,CACb;IACI,MAAM;AACV,GACA;IAAE,KAAK;AAAK;AAGD,SAAS;IACpB,OAAO;AACX"}},
-    {"offset": {"line": 36, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}
