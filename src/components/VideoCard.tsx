@@ -1,51 +1,48 @@
-import Image, { StaticImageData } from "next/image";
+import { useEffect, useState } from "react";
 
 interface VideoCardProps {
   title: string;
-  thumbnailUrl: StaticImageData;
-  duration: string;
-  author: string;
+  fileKey: string;
 }
 
-export default function VideoCard({
-  title,
-  thumbnailUrl,
-  duration,
-  author,
-}: VideoCardProps) {
+export default function VideoCard({ title, fileKey }: VideoCardProps) {
+  const [videoUrl, setVideoUrl] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchSignedUrl = async () => {
+      try {
+        const res = await fetch(
+          `/api/generateSignedUrl?key=${encodeURIComponent(fileKey)}`
+        );
+        if (!res.ok)
+          throw new Error(`Failed to fetch signed URL: ${res.statusText}`);
+
+        const data = await res.json();
+        if (data.url) setVideoUrl(data.url);
+      } catch (error) {
+        console.error("Error fetching signed URL:", error);
+      }
+    };
+
+    fetchSignedUrl();
+  }, [fileKey]);
+
   return (
-    <div className="rounded-lg overflow-hidden shadow-lg group relative">
-      <div className="relative aspect-video">
-        <Image
-          src={thumbnailUrl}
-          alt={title}
-          width={1920}
-          height={1080}
-          className="w-full h-full object-cover"
-        />
-        <span className="absolute bottom-2 right-2 bg-black/70 text-white px-2 py-1 text-sm rounded">
-          {duration}
-        </span>
-        <button className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-12 w-12 text-white"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-            />
-          </svg>
-        </button>
+    <div className="rounded-lg overflow-hidden shadow-lg">
+      <div className="relative w-full h-48">
+        {videoUrl ? (
+          <video controls className="w-full h-full object-cover">
+            <source src={videoUrl} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        ) : (
+          <div className="w-full h-full flex items-center justify-center bg-gray-200">
+            Loading...
+          </div>
+        )}
       </div>
       <div className="p-4">
-        <h3 className="font-semibold mb-2">{title}</h3>
-        <p className="text-sm text-gray-600 dark:text-gray-400">By {author}</p>
+        <h3 className="font-semibold">{title}</h3>
       </div>
     </div>
   );
