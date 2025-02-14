@@ -66,13 +66,7 @@ export default function Images() {
 
       <main className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {files.map((file) => (
-          <ImageCard
-            key={file.Key}
-            title={`Sample Video ${file.Key}`}
-            fileKey={file.Key} // Pass the fileKey prop
-            duration="0:30"
-            author="Studio Monk"
-          />
+          <ImageCard key={file.Key} title={`${file.Key}`} fileKey={file.Key} />
         ))}
       </main>
 

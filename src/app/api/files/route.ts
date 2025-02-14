@@ -15,14 +15,13 @@ export async function GET(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url);
     const continuationToken = searchParams.get("continuationToken");
-    const category = searchParams.get("category"); // ✅ Get "category" (images/videos)
+    const category = searchParams.get("category");
 
-    // 🔥 Set default prefix based on category
     let prefix = "";
     if (category === "images") {
-      prefix = "images/"; // Adjust based on your S3 structure
+      prefix = "images/";
     } else if (category === "videos") {
-      prefix = "videos/"; // Adjust based on your S3 structure
+      prefix = "videos/";
     }
 
     console.log("🟢 Fetching files from S3 in folder:", prefix);

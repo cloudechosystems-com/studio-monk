@@ -4,16 +4,9 @@ import Image from "next/image";
 interface ImageCardProps {
   title: string;
   fileKey: string;
-  duration: string;
-  author: string;
 }
 
-export default function ImageCard({
-  title,
-  fileKey,
-  duration,
-  author,
-}: ImageCardProps) {
+export default function ImageCard({ title, fileKey }: ImageCardProps) {
   const [thumbnailUrl, setThumbnailUrl] = useState<string | null>(null);
 
   useEffect(() => {
@@ -98,9 +91,7 @@ export default function ImageCard({
             Loading...
           </div>
         )}
-        <span className="absolute bottom-2 right-2 bg-black/70 text-white px-2 py-1 text-sm rounded">
-          {duration}
-        </span>
+
         <button
           className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity"
           onClick={() => handleDownload(fileKey)}
