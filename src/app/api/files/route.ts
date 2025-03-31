@@ -46,11 +46,19 @@ export async function GET(req: NextRequest) {
         ? encodeURIComponent(response.NextContinuationToken)
         : null,
     });
-  } catch (error: any) {
-    console.error("❌ Error fetching S3 objects:", error.message);
-    return NextResponse.json(
-      { error: "Failed to fetch files", details: error.message },
-      { status: 500 }
-    );
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error("❌ Error fetching S3 objects:", error.message);
+      return NextResponse.json(
+        { error: "Failed to fetch files", details: error.message },
+        { status: 500 }
+      );
+    } else {
+      console.error("❌ Unknown error occurred:", error);
+      return NextResponse.json(
+        { error: "Failed to fetch files", details: "Unknown error occurred" },
+        { status: 500 }
+      );
+    }
   }
 }
