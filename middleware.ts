@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import jwt from "jsonwebtoken";
 import jwkToPem from "jwk-to-pem";
 
-const COGNITO_REGION = process.env.AWS_REGION!;
+const COGNITO_REGION = process.env.NEXT_AWS_REGION!;
 const COGNITO_POOL_ID = process.env.COGNITO_POOL_ID!;
 const COGNITO_CLIENT_ID = process.env.COGNITO_CLIENT_ID!;
 
