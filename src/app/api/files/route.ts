@@ -34,7 +34,7 @@ export async function GET(req: NextRequest) {
       ContinuationToken: continuationToken
         ? decodeURIComponent(continuationToken)
         : undefined,
-      MaxKeys: 5, // Adjust for pagination
+      MaxKeys: 10, // Adjust for pagination
     });
 
     const response = await s3Client.send(command);
