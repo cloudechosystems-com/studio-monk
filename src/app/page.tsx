@@ -1,6 +1,3 @@
-import LogoutForm from "@/ui/auth/logout-form";
-import Image from "next/image";
-
 export default function Home() {
   return (
         <div className="flex flex-col justify-center items-center min-h-screen text-center px-6 sm:px-16 bg-gradient-to-r from-blue-100 via-purple-200 to-pink-100 animate-gradient">
