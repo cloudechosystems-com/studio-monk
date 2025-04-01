@@ -26,6 +26,7 @@ export async function GET(req: NextRequest) {
 
     console.log("🟢 Fetching files from S3 in folder:", prefix);
     console.log("🔵 Received ContinuationToken:", continuationToken);
+    console.log("BUCKET_NAME:", BUCKET_NAME);
 
     const command = new ListObjectsV2Command({
       Bucket: BUCKET_NAME,
