@@ -113,7 +113,7 @@ export default function ImageCard({ title, fileKey }: ImageCardProps) {
         </button>
       </div>
       <div className="p-4">
-        <h3 className="font-semibold mb-2">{title}</h3>
+        {/* <h3 className="font-semibold mb-2">{title}</h3> */}
         {/* <p className="text-sm text-gray-600 dark:text-gray-400">By {author}</p> */}
       </div>
     </div>

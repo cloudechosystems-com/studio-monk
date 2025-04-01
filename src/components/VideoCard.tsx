@@ -42,7 +42,7 @@ export default function VideoCard({ title, fileKey }: VideoCardProps) {
         )}
       </div>
       <div className="p-4">
-        <h3 className="font-semibold">{title}</h3>
+        {/* <h3 className="font-semibold">{title}</h3> */}
       </div>
     </div>
   );
