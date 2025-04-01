@@ -30,11 +30,11 @@ export async function GET(req: NextRequest) {
 
     const command = new ListObjectsV2Command({
       Bucket: BUCKET_NAME,
-      Prefix: prefix, // ✅ Filter objects by folder
+      Prefix: prefix,
       ContinuationToken: continuationToken
         ? decodeURIComponent(continuationToken)
         : undefined,
-      MaxKeys: 10, // Adjust for pagination
+      MaxKeys: 12,
     });
 
     const response = await s3Client.send(command);
