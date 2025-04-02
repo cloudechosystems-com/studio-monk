@@ -50,18 +50,10 @@ export default function Videos() {
   }, []);
 
   return (
-    <div className="min-h-screen p-8">
+    <div className="min-h-screen p-8 text-white" style={{ backgroundColor: "black" }}>
       <header className="mb-8">
         <h1 className="text-3xl font-bold mb-4">Studio</h1>
-        <div className="max-w-2xl">
-          <input
-            type="search"
-            placeholder="Search for stock videos..."
-            className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-        </div>
+        
       </header>
 
       <main className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -85,7 +77,17 @@ export default function Videos() {
             {loading ? "Loading..." : "Load More"}
           </button>
         </div>
+        
       )}
+       <div className="pb-6 text-gray-600 text-sm flex justify-center">
+        <div className="transition-opacity duration-500 hover:opacity-80">
+          Powered by
+          <a href="https://shricom.com" className="text-blue-600 font-semibold hover:underline ml-1" target="_blank" rel="noopener noreferrer">
+            shricom.com
+          </a>
+        </div>
+</div>
+
     </div>
   );
 }

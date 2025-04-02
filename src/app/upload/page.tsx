@@ -13,7 +13,7 @@ export default function UploadPage() {
   //   };
 
   return (
-    <div className="min-h-screen p-8">
+    <div className="min-h-screen p-8 text-white" style={{ backgroundColor: "black" }}>
       {/* <header className="mb-8">
         <h1 className="text-3xl font-bold mb-4">Upload Video</h1>
         <p className="text-gray-600 dark:text-gray-400 mb-8">
