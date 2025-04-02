@@ -13,7 +13,6 @@ interface File {
 }
 
 export default function Images() {
-  const [searchQuery, setSearchQuery] = useState("");
   const [files, setFiles] = useState<File[]>([]);
   const [continuationToken, setContinuationToken] = useState<string | null>(
     null
