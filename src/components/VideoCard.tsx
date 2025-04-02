@@ -5,7 +5,7 @@ interface VideoCardProps {
   fileKey: string;
 }
 
-export default function VideoCard({ title, fileKey }: VideoCardProps) {
+export default function VideoCard({ fileKey }: VideoCardProps) {
   const [videoUrl, setVideoUrl] = useState<string | null>(null);
 
   useEffect(() => {

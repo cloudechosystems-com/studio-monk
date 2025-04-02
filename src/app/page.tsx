@@ -1,13 +1,12 @@
 export default function Home() {
   return (
     <div className="min-h-screen p-8 text-white bg-black flex flex-col items-center justify-center">
-      {/* Common Heading */}
       <h1 className="text-5xl font-extrabold text-gray-100 mb-16 text-center">
         Explore Free Stock Media
       </h1>
       
       <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-16">
-        {/* Image Card */}
+
         <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 bg-opacity-90 backdrop-blur-xl border border-gray-700 rounded-2xl shadow-lg overflow-hidden transition duration-500 p-6 text-center will-change-transform hover:border-purple-400">
           <img
             src="/images/homeimage.png"
