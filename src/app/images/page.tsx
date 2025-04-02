@@ -51,7 +51,22 @@ export default function Images() {
   return (
     <div className="min-h-screen p-8 text-white" style={{ backgroundColor: "black" }}>
       <header className="mb-8">
-        <h1 className="text-3xl font-bold mb-4">Studio</h1>
+      <h1 className="text-5xl font-extrabold text-gray-100 mb-2 text-center">
+          Explore Free Stock Images
+        </h1>
+        <div className="text-gray-600 text-sm flex justify-center pb-20">
+          <div className="transition-opacity duration-500 hover:opacity-80">
+            Powered by
+            <a
+              href="https://shricom.com"
+              className="text-blue-600 font-semibold hover:underline ml-1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              shricom.com
+            </a>
+          </div>
+        </div>
        
       </header>
 
@@ -77,14 +92,6 @@ export default function Images() {
           </button>
         </div>
       )}
-      <div className="pt-24 pb-0 text-gray-600 text-sm flex justify-center">
-        <div className="transition-opacity duration-500 hover:opacity-80">
-          Powered by
-          <a href="https://shricom.com" className="text-blue-600 font-semibold hover:underline ml-1" target="_blank" rel="noopener noreferrer">
-            shricom.com
-          </a>
-        </div>
-      </div>
     </div>
   );
 }
