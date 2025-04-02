@@ -45,7 +45,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="pt-20 pb-6 text-gray-600 text-sm flex justify-center">
+      <div className="pt-24 pb-0 text-gray-600 text-sm flex justify-center">
         <div className="transition-opacity duration-500 hover:opacity-80">
           Powered by
           <a href="https://shricom.com" className="text-blue-600 font-semibold hover:underline ml-1" target="_blank" rel="noopener noreferrer">
