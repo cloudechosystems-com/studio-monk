@@ -4,6 +4,7 @@ import { Amplify } from "aws-amplify";
 import { cognitoConfig } from "@/config/cognito";
 import "./globals.css";
 import ConfigureAmplifyClientSide from "./amplify-cognito-config";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +39,7 @@ export default function RootLayout({
           {children}
         </>
       </body>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_MEASUREMENT_ID as string} />
     </html>
   );
 }
