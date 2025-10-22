@@ -1,9 +1,13 @@
 export default function Home() {
   return (
     <div className="min-h-screen p-8 text-white bg-black flex flex-col items-center justify-center">
-      <h1 className="text-5xl font-extrabold text-gray-100 mb-2 text-center">
-          Explore Free Stock Media
-        </h1>
+     <h1 className="text-5xl font-extrabold text-gray-100 mb-2 text-center">
+  The Ultimate Free Media Suite
+</h1>
+<p className="text-gray-400 text-center max-w-xl mb-6">
+  Every tool you need for images, videos, memes, fonts, and stickers—all at your fingertips.Browse, create, edit, and download high-quality media for free.
+</p>
+
         <div className="text-gray-600 text-sm flex justify-center pb-20">
           <div className="transition-opacity duration-500 hover:opacity-80">
             Powered by
