@@ -105,7 +105,7 @@ export default function Home() {
         {/* Sticker Studio Card */}
         <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 bg-opacity-90 backdrop-blur-xl border border-gray-700 rounded-2xl shadow-lg overflow-hidden transition duration-500 p-6 text-center will-change-transform hover:border-purple-400">
   <img
-    src="/images/SickerStudio.png"
+    src="/images/StickerStudio.png"
     alt="StickerStudio"
     className="w-full h-56 object-cover rounded-xl shadow-md mb-4"
   />
