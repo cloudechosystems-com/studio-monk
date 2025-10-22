@@ -21,7 +21,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-      <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-16">
+      <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-3 gap-16">
         {/* Image Card */}
 
         <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 bg-opacity-90 backdrop-blur-xl border border-gray-700 rounded-2xl shadow-lg overflow-hidden transition duration-500 p-6 text-center will-change-transform hover:border-purple-400">
